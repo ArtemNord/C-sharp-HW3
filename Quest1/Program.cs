@@ -1,9 +1,8 @@
 ﻿// Напишите программу, которая принимает на вход пятизначное число и проверяет, 
 // является ли оно палиндромом.
 
-Console.WriteLine("Введите пятизначное число: ");
-int number = Convert.ToInt32(Console.ReadLine());
-
+void Palindrom (int number)
+{
 if (number > 99999 || number < 10000) Console.WriteLine("Введите пятизначное число");
 else {
     int n0 = number / 10000;
@@ -17,3 +16,9 @@ else {
     if (n0 == n4 && n1 == n3) Console.WriteLine($"Число {number} - Полиндром");
     else Console.WriteLine($"Число {number} не является полиндромом");
 }
+}
+
+Console.WriteLine("Введите пятизначное число: ");
+int number = Convert.ToInt32(Console.ReadLine());
+
+Palindrom(number);
